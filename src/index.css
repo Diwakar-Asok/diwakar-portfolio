@@ -1,27 +1,36 @@
-:root{
-  --bg:#0b1113; 
-  --bg2:#0e1418;
-  --card:rgba(255,255,255,.035);
-  --border:rgba(255,255,255,.09);
-  --text:#eaf1f3; 
-  --muted:#a2b2b9;
-  --accent:#16a085; 
-  --accent-2:#2ecc71;
-  --ring:rgba(22,160,133,.35);
-  --shadow: 0 8px 24px rgba(0,0,0,.25);
+:root {
+  --bg: #f9fafb;
+  --text: #1a1a1a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #00b98b;
+  --accent-text: #052e26;
+  --role-color: #007e5f;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg: #0b1416;
+  --text: #e6e6e6;
+  --card: #101c1f;
+  --border: #1e2b2f;
+  --accent: #00e29f;
+  --accent-text: #012c23;
+  --role-color: #00b98b;
+}
+
+/* Apply global colors */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
 *{
   box-sizing:border-box
 }
 html,body,#root{height:100%}
-body{
-  margin:0; 
-  color:var(--text);
-  background: radial-gradient(1200px 800px at 10% 10%, #0f1b1f, transparent 50%),
-              linear-gradient(to bottom, var(--bg), var(--bg2));
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-}
 
 /* LAYOUT */
 .shell{
@@ -65,7 +74,7 @@ body{
   font-weight:400
 }
 .role{
-  color:#b7f1df; 
+  color: var(--role-color);
   font-weight:700; 
   margin:2px 0 8px
 }
@@ -120,30 +129,46 @@ body{
 }
 
 .cta{
-  margin-bottom:10px
-}
-.btn{
-  margin-top: 16px;
-  padding:.7rem 1rem; 
-  border-radius:14px; 
-  border:1px solid var(--border);
-  background:var(--card); 
-  color:var(--text); 
-  cursor:pointer;
-}
-.btn:hover{
-  background:rgba(255,255,255,.08)
-}
-.btn.accent{
-  background:linear-gradient(135deg,var(--accent),var(--accent-2)); 
-  border:none; 
-  color:#07221b; 
-  font-weight:700
-}
-.btn.accent:hover{
-  filter:brightness(1.05)
+  margin:25px 0px 30px 0px
 }
 
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+/* Light mode button (outlined) */
+:root .btn {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+:root .btn:hover {
+  background: var(--accent);
+  color: var(--accent-text);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 185, 139, 0.25);
+}
+
+/* Dark mode button (filled) */
+[data-theme="dark"] .btn {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 2px solid transparent;
+  box-shadow: 0 3px 10px rgba(0, 226, 159, 0.2);
+}
+
+[data-theme="dark"] .btn:hover {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: 0 3px 12px rgba(0, 226, 159, 0.35);
+}
 /* MAIN */
 .main{
   display:grid; 
@@ -155,7 +180,14 @@ body{
   border-radius:20px; 
   padding:22px; 
   box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0,0,0,.25);
+}
+
 h2{
   margin:0 0 10px
 }
@@ -171,8 +203,8 @@ h2{
   list-style:none
 }
 .tags li{
-  font-size:12px; 
-  padding:6px 10px; 
+  font-size:16px; 
+  padding:10px 15px; 
   border-radius:999px; 
   border:1px solid var(--border); 
   background:var(--card)
@@ -271,40 +303,10 @@ h2{
   padding:12px 0
 }
 /* === About layout (2-col) === */
-.about-card .about-grid{
-  display: grid;
-  grid-template-columns: minmax(46ch, 1fr) 320px;
-  gap: 24px 28px;
-  align-items: start;
-}
-
-/* Keep the chip column narrow and pinned to the top-right */
-.about-card .tags{
-  align-self: start;
-  justify-self: end;
-  max-width: 320px;
-}
-
-/* === Text column polish === */
-.about-card .about-text{
-  max-width: 76ch;               
-  line-height: 1.72;
-  font-size: 0.985rem;
-  text-wrap: pretty;              
-  hyphens: auto;                  
-}
-
-.about-card .about-text p{
-  margin: 0;                      
-}
-
-.about-card .about-text p + p{
-  margin-top: 0.9rem;              
-}
-
-.about-card .about-text strong{
-  font-weight: 600;
-  color: var(--accent);
+.about-text{
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-right: 0;   /* make sure there's no extra margin */
 }
 
 @media (max-width: 1024px){
@@ -319,8 +321,6 @@ h2{
     max-width: 72ch;
   }
 }
-
-
 
 /* Card breathing room */
 #experience.card {
@@ -394,3 +394,86 @@ h2{
   padding-top: 16px;
   border-top: 1px dashed var(--border, rgba(255,255,255,0.12));
 }
+
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+}
+.theme-toggle:hover {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .shell {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .side {
+    position: static;           /* stop sticky overlap */
+    width: 100%;
+    text-align: center;         /* center everything */
+    padding: 16px;
+  }
+
+  .avatar {
+    margin: 0 auto 12px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .role {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .navlink {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 12px auto 0;
+  }
+
+  .main {
+    gap: 16px;
+  }
+}
+

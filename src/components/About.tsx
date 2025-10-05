@@ -5,13 +5,6 @@ export const About = () => {
       <div className="about-grid">
         <div className="about-text">
           <p>
-            Innovating the web, pixel by pixel, sprint by sprint. With over 9.9 years of
-            end-to-end experience in frontend engineering, I specialize in building scalable,
-            modular, and performance-optimized applications using React.js, Redux Toolkit,
-            and modern UI frameworks.
-          </p>
-
-          <p>
             Currently working at LTIMindtree as a Specialist - Software Engineering, I’ve been
             driving the Gallagher AI Productivity Platform, an internal AI tool similar to ChatGPT that helps
             employees securely generate PPTs, notes, and keyword insights using OpenAI and
@@ -50,12 +43,20 @@ export const About = () => {
         </div>
         
         <ul className="tags">
-          {[
-            "React 19","NextJS","TypeScript","Vite","Redux Toolkit","Tailwind",
-            "Jest","Javascript","Docker","CI/CD","Ruby on Rails","MySQL","PostgreSQL", "CSS3", "HTML5"
-          ].map(t => (
-            <li key={t}>{t}</li>
-          ))}
+          <li><i className="devicon-react-original colored"></i> React 19</li>
+          <li><i className="devicon-nextjs-original"></i> NextJS</li>
+          <li><i className="devicon-typescript-plain colored"></i> TypeScript</li>
+          <li><i className="devicon-redux-original colored"></i> Redux Toolkit</li>
+          <li><i className="devicon-tailwindcss-plain colored"></i> Tailwind</li>
+          <li><i className="devicon-jest-plain colored"></i> Jest</li>
+          <li><i className="devicon-javascript-plain colored"></i> JavaScript</li>
+          <li><i className="devicon-docker-plain colored"></i> Docker</li>
+          <li><i className="devicon-gitlab-plain colored"></i> CI/CD</li>
+          <li><i className="devicon-rails-plain colored"></i> Ruby on Rails</li>
+          <li><i className="devicon-mysql-plain colored"></i> MySQL</li>
+          <li><i className="devicon-postgresql-plain colored"></i> PostgreSQL</li>
+          <li><i className="devicon-css3-plain colored"></i> CSS3</li>
+          <li><i className="devicon-html5-plain colored"></i> HTML5</li>
         </ul>
       </div>
     </section>

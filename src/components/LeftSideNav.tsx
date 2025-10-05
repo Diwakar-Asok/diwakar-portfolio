@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import ThemeToggle from "./ThemeToggle";
 import diwakarImg from '../assets/Diwakar.jpeg';
 import resumePdf from '../assets/Diwakar_A_Senior_Frontend_Developer.pdf';
 
@@ -32,6 +33,7 @@ export const LeftSidenav = () => {
       <p className="bio">
         React.js & Redux Expert | AI & LLM Integration | Scalable UI/UX Solutions | Performance-Driven | CI/CD | Web Accessibility | 9.9 Yrs in AI, Telecom, Fintech & Analytics
       </p>
+      <ThemeToggle />
       <nav className="nav">
         {[
           ["about","About"],
@@ -45,12 +47,12 @@ export const LeftSidenav = () => {
       </nav>
 
       <div className="social">
-        <a href="mailto:diwaasok@gmail.com" aria-label="Email" title="Email">✉️</a>
-        <a href="https://github.com/Diwakar-Asok" aria-label="GitHub" title="GitHub">🐙</a>
-        <a href="https://www.linkedin.com/in/diwakar-a-03079913b/" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="mailto:diwaasok@gmail.com" aria-label="Email" title="Email" target="blank">✉️</a>
+        <a href="https://github.com/Diwakar-Asok" aria-label="GitHub" title="GitHub" target="blank">🐙</a>
+        <a href="https://www.linkedin.com/in/diwakar-a-03079913b/" aria-label="LinkedIn" title="LinkedIn" target="blank">in</a>
       </div>
       <div className="cta">
-        <a className="btn accent" href={resumePdf} download="Diwakar_A_Senior_Frontend_Developer.pdf">Download Resume</a>
+        <a className="btn" href={resumePdf} download="Diwakar_A_Senior_Frontend_Developer.pdf">Download Resume</a>
       </div>
     </aside>
   );
