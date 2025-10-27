@@ -8,11 +8,11 @@ type Project = {
 };
 
 const projects: Project[] = [
-  { title: "Pulse Admin",
-    blurb: "Role-based dashboard with audit logs, widgets, theming.",
-    tags: ["React 19", "Vite", "RTK Query"],
-    repo: "https://github.com/you/pulse-admin",
-    live: "https://pulse-admin.your.dev"
+  { title: "CitizenCare Portal",
+    blurb: "CitizenCare Portal is a multi-step social support application form built using React + TypeScript + Vite. It allows users to fill personal, family, and financial information, supports English/Arabic translation, and includes an AI-assisted writing helper powered by OpenAI.",
+    tags: ["React 19", "Vite", "TypeScript", "OpenAI"],
+    repo: "https://github.com/Diwakar-Asok/citizen-care-portal",
+    live: "https://citizen-care-portal.vercel.app/apply/step1"
   },
   { title: "Ledger",
     blurb: "Expense tracker with budgets, charts, CSV import/export.",
@@ -39,8 +39,8 @@ export const Projects = () => {
             <div className="proj-h">
               <strong>{p.title}</strong>
               <div className="links">
-                <a href={p.repo} title="GitHub">🐙</a>
-                <a href={p.live} title="Live">↗</a>
+                <a href={p.repo} title="GitHub" target="blank">🐙</a>
+                <a href={p.live} title="Live" target="blank">↗</a>
               </div>
             </div>
             <p>{p.blurb}</p>
