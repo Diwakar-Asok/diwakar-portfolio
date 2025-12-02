@@ -18,7 +18,7 @@ const projects: Project[] = [
     blurb: "Trackify is a modern team-based project and task management system built using **React 19 + TypeScript + Vite**. It includes role-based access (Admin & Member), project creation, task assignment, kanban board view, team management, and local persistence",
     tags: ["React 19", "Vite", "Typescript", "RTK", "Javascript", "React DnD", "Tailwind CSS"],
     repo: "https://github.com/Diwakar-Asok/team-task-manager",
-    live: "https://trackify-blond-phi.vercel.app"
+    live: "https://trackify-blond-phi.vercel.app/login"
   },
 ];
 
