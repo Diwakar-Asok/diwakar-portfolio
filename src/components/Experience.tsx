@@ -1,10 +1,9 @@
 export const Experience = () => {
   return (
     <section id="experience" className="card">
-      <h2>Experience</h2>
+      <h2>Live Project Experiences</h2>
 
       <div className="xp">
-        {/* Farshore → Nokia Mediation (your current flagship) */}
         <div className="xp-row">
           <div className="xp-dot" />
           <div className="xp-body">
@@ -14,22 +13,23 @@ export const Experience = () => {
             </div>
             <ul className="bullets">
               <strong>Gallagher AI</strong>
-              <li>Built a domain-specific AI productivity tool similar to ChatGPT that one who has used is Gallagher employees to securely auto-generate PPTs, notes, and keyword insights using OpenAI and other LLM-based APIs.</li>
-              <li>Azure DevOps: Used for sprint planning, task boards, CI/CD pipelines, and secure deployments.</li>
-              <li>Delivered responsive, modern UI with Tailwind and advanced state management using React hooks + Redux Toolkit.</li>
-              <li>Optimized performance with lazy loading, code splitting, and memoization, delivering smooth UX for AI-assisted workflows.</li>
+              <li>Developed a domain-specific AI productivity tool enabling Gallagher employees to securely auto-generate PPTs, notes, and keyword insights using OpenAI and LLM-based APIs.</li>
+              <li>Architected the frontend with React 19, Vite, Tailwind CSS, TypeScript, and integrated secure API authentication.</li>
+              <li>Used Azure DevOps boards & pipelines for sprint planning, CI/CD, and deployments.</li>
+              <li>Delivered optimized UI performance through lazy loading, code splitting, and React.memo.</li>
+              <li>Implemented unit tests with Jest & React Testing Library, ensuring reliability and regression-free releases.</li>
             </ul>
             <ul className="bullets">
-              <strong>Nokia Mediation</strong>
-              <li>Owned dashboard & alerts modules across a 90k+ LOC React app (microfrontends).</li>
-              <li>Developed advanced data dashboards using AG-Grid with features like grouping, filtering, and custom columns.</li>
-              <li>Mentored 4+ frontend engineers and enforced WCAG accessibility standards across modules.</li>
+              <strong>Nokia Mediation - Micro Frontends</strong>
+              <li>Built enterprise-grade dashboards and alerting systems using React + AG-Grid for real-time telecom data monitoring.</li>
+              <li>Applied SOLID principles and modular architecture to enhance scalability and maintainability.</li>
               <li>Collaborated with backend & DevOps teams to streamline CI/CD pipelines (GitLab → Jenkins → Docker).</li>
+              <li>Mentored 4+ frontend engineers and enforced WCAG accessibility standards across modules.</li>
+              <li>Ensured cross-browser/device compatibility and consistently improved UI performance.</li>
             </ul>
           </div>
         </div>
 
-        {/* Farshore – other client projects */}
         <div className="xp-row">
           <div className="xp-dot" />
           <div className="xp-body">
@@ -46,7 +46,6 @@ export const Experience = () => {
           </div>
         </div>
 
-        {/* QDXSoft – QADEX product suite */}
         <div className="xp-row">
           <div className="xp-dot" />
           <div className="xp-body">

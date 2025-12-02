@@ -1,69 +1,65 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Diwakar A — Portfolio Website
 
-Currently, two official plugins are available:
+This is my personal portfolio website built using **React 19 + TypeScript**, showcasing my work as a **Senior/Lead Frontend Developer**.  
+The portfolio highlights my professional experience, frontend skills, GitHub projects, and provides direct links to my resume and social profiles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this portfolio is to present a clean, modern, and highly readable overview of my expertise — optimized for hiring managers, recruiters, and technical interviewers.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Dark & Light Mode  
+- Smooth UI theme toggle  
+- Preferences saved using local storage  
+- Consistent colors and typography across both modes
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### About Section  
+- Summary of my professional background  
+- Skills in React, TypeScript, Redux Toolkit, CI/CD, DevOps, Micro-frontends, etc.  
+- Domains: AI Productivity, Telecom, Fintech, Social Apps, Enterprise SaaS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Experience Section  
+- Timeline of major roles (2022 → Present, 2019 → 2022, etc.)  
+- Real client projects, responsibilities, and impact  
+- Organized for maximum readability
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### GitHub Projects Section  
+Includes links, descriptions, tags, and live previews for:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **CitizenCare Portal**  
+  Multi-step social support form with validation, bilingual UI, and AI-assisted writing.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Trackify**  
+  Team-based task and project management system with role-based access and Kanban board.
+
+### Resume Download  
+- One-click download button  
+- Latest resume stored in the repository
+
+### Fully Responsive  
+- Works on all screen sizes  
+- Clean layout for mobile, tablet, and desktop
+
+### Social Links  
+- GitHub  
+- LinkedIn  
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|---------|------------|
+| Framework | **React 19** |
+| Language | **TypeScript** |
+| Styling | Custom CSS |
+| Icons | Emoji-based / custom SVG |
+| Deployment | **Vercel** |
+| State | Local component state + Context (for theme) |
+
+---
+
+## Project Structure

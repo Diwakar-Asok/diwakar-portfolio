@@ -33,12 +33,23 @@ export const About = () => {
           </p>
 
           <p>
+            <strong>Frontend (Primary):</strong> React.js | Redux Toolkit | TypeScript | Vite | Tailwind CSS | SCSS | AG-Grid | JavaScript (ES6+) | Webpack | Material UI | HTML5 | CSS3 | Next.js (basic) | Responsive UI | Micro-Frontends | Performance Optimization
+          </p>
+
+          <p>
+            <strong>DevOps / Tools:</strong> GitLab CI/CD | Jenkins | Docker (basic) | Azure DevOps | Git | SonarQube
+          </p>
+
+          <p>
             <strong>Domains:</strong> AI Productivity | Telecom | Fintech | Social Apps | Enterprise SaaS
           </p>
 
           <p>
-            I’m actively open to challenging roles where innovation, design precision, and
-            performance tuning go hand-in-hand. Let’s connect.
+            <strong>Backend (Secondary / Legacy Skills):</strong> Ruby | Ruby on Rails | MySQL | PostgreSQL | REST APIs
+          </p>
+
+          <p>
+            I’m open to global onsite engineering roles where innovation, design quality, and performance engineering come together to build exceptional digital experiences.
           </p>
         </div>
         

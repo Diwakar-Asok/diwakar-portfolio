@@ -31,7 +31,7 @@ export const LeftSidenav = () => {
       <h1 className="name">Diwakar A</h1>
       <p className="role">Senior/Lead Frontend Developer</p>
       <p className="bio">
-        React.js & Redux Expert | AI & LLM Integration | Scalable UI/UX Solutions | Performance-Driven | CI/CD | Web Accessibility | 9.9 Yrs in AI, Telecom, Fintech & Analytics
+        Senior Frontend Developer | React.js | TypeScript | Redux ToolKit | Micro-Frontends | Performance Optimization | 10+ Yrs Experience
       </p>
       <ThemeToggle />
       <nav className="nav">

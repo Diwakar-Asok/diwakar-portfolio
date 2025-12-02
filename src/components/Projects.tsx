@@ -10,34 +10,28 @@ type Project = {
 const projects: Project[] = [
   { title: "CitizenCare Portal",
     blurb: "CitizenCare Portal is a multi-step social support application form built using React + TypeScript + Vite. It allows users to fill personal, family, and financial information, supports English/Arabic translation, and includes an AI-assisted writing helper powered by OpenAI.",
-    tags: ["React 19", "Vite", "TypeScript", "OpenAI"],
+    tags: ["React 19", "Vite", "TypeScript", "OpenAI", "Javascript", "RTK", "React Hook Form","Tailwind CSS", "MUI", "i18next"],
     repo: "https://github.com/Diwakar-Asok/citizen-care-portal",
-    live: "https://citizen-care-portal.vercel.app/apply/step1"
+    live: "https://citizen-care-portal.vercel.app/apply/step1",
   },
-  { title: "Ledger",
-    blurb: "Expense tracker with budgets, charts, CSV import/export.",
-    tags: ["TypeScript", "Zustand", "Recharts"],
-    repo: "https://github.com/you/ledger",
-    live: "https://ledger.your.dev"
-  },
-  { title: "Kanflow",
-    blurb: "Realtime kanban with drag & drop and optimistic updates.",
-    tags: ["WebSockets", "DndKit", "Postgres"],
-    repo: "https://github.com/you/kanflow",
-    live: "https://kanflow.your.dev"
+  { title: "Trackify",
+    blurb: "Trackify is a modern team-based project and task management system built using **React 19 + TypeScript + Vite**. It includes role-based access (Admin & Member), project creation, task assignment, kanban board view, team management, and local persistence",
+    tags: ["React 19", "Vite", "Typescript", "RTK", "Javascript", "React DnD", "Tailwind CSS"],
+    repo: "https://github.com/Diwakar-Asok/team-task-manager",
+    live: "https://trackify-blond-phi.vercel.app"
   },
 ];
 
 export const Projects = () => {
   return (
     <section id="projects" className="card">
-      <h2>Projects</h2>
+      <h2>GitHub Projects</h2>
       <div className="grid-3">
         {projects.map(p => (
           <article key={p.title} className="proj">
-            <div className="shot">{p.shot ? <img src={p.shot} /> :  <span>preview</span>}</div>
+          
             <div className="proj-h">
-              <strong>{p.title}</strong>
+              <h3>{p.title}</h3>
               <div className="links">
                 <a href={p.repo} title="GitHub" target="blank">🐙</a>
                 <a href={p.live} title="Live" target="blank">↗</a>
